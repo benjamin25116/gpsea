@@ -1,31 +1,83 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import css from "./header.module.css"
+import MenuIcon from "./menuIcon"
 
+// Styled Components
 const Navigation = styled.nav`
   background: white;
   display: flex;
-  flex-direction: column;
-  margin: 15px;
+  padding: 15px 15px 0 15px;
+  border-bottom: 1px solid grey;
 `
+const Dropdown = styled.ul`` // Styles are in header.module.css due to specificity issues for conditional rendering
 
-const Header = ({ siteTitle }) => (
-  <Navigation>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
-  </Navigation>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+const TopMenuBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 15%;
+  padding-bottom: 15px;
+`
+const MenuItems = styled.li`
+  text-align: center;
+  padding-bottom: 15px;
+  font-weight: 200;
+`
+// Inline styles for images
+const LogoStyle = {
+  width: "200px",
+}
+const HamburgerStyle = {
+  width: "20px",
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
+// Button function
+function clickHandler() {
+  if (document.getElementById("menu-dropdown").style.display === "") {
+    document.getElementById("menu-dropdown").style.display = "block"
+  } else {
+    document.getElementById("menu-dropdown").style.display = ""
+  }
+}
+
+const Header = () => {
+  return (
+    <Navigation className={css.navigation}>
+      <TopMenuBar className={css.topMenuBar}>
+        <Link to="/">
+          <MenuIcon originalName="gpsea-logo-long.png" style={LogoStyle} />
+        </Link>
+        <button
+          onClick={clickHandler}
+          id="menu-button"
+          className={css.menuButton}
+        >
+          <MenuIcon originalName="menu-icon.png" style={HamburgerStyle} />
+        </button>
+      </TopMenuBar>
+      <Dropdown id="menu-dropdown" className={css.dropdown}>
+        <MenuItems className={css.menuItems}>
+          <Link to="/about">About</Link>
+        </MenuItems>
+        <MenuItems className={css.menuItems}>
+          <Link to="/what-is-godly-play">What is Godly Play</Link>
+        </MenuItems>
+        <MenuItems className={css.menuItems}>
+          <Link to="/training">Training</Link>
+        </MenuItems>
+        <MenuItems className={css.menuItems}>
+          <Link to="/blog">Blog</Link>
+        </MenuItems>
+        <MenuItems className={css.menuItems}>
+          <Link to="/gallery">Gallery</Link>
+        </MenuItems>
+        <MenuItems className={css.menuItems}>
+          <Link to="/contact">Contact</Link>
+        </MenuItems>
+      </Dropdown>
+    </Navigation>
+  )
 }
 
 export default Header

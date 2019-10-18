@@ -1,0 +1,43 @@
+@media screen and (min-width: 768px) {
+ .menuButton {
+  display: none;
+ }
+
+ .dropdown {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 85%;
+ }
+}
+
+@media screen and (max-width: 767px) {
+
+ .navigation {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 0 15px;
+  border-bottom: 1px solid grey;
+ }
+
+ .dropdown {
+  display: flex;
+  flex-direction: column;
+  display: none;
+ }
+
+ .topMenuBar {
+  padding-bottom: 15px;
+ }
+
+ .menuItems {
+  padding-top: 5px;
+  padding-left: 25px;
+  font-weight: 200;
+ }
+}
+
+.menuItems>a {
+ font-weight: 200;
+ color: var(--black);
+}
