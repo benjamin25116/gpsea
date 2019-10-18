@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built by
+          © {new Date().getFullYear()}, built by
           {` `}
           _pitchun
         </footer>
