@@ -32,9 +32,16 @@ const Button = styled.input`
   border-radius: 5px;
   border: none;
   background-color: var(--bright);
+  -webkit-box-shadow: 0 1px 4px var(--black);
   box-shadow: 0 1px 4px var(--black);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-weight: bold;
   font-size: 1.2rem;
