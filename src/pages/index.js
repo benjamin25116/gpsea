@@ -9,6 +9,7 @@ import VideoCard from "../components/videoCard"
 const TextContainer = styled.article`
   position: relative;
   top: 0;
+  width: calc(100vw - 30px);
   max-width: 600px;
   margin: 0 auto;
   min-height: 400px;

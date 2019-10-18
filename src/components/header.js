@@ -8,7 +8,7 @@ import Image from "./image"
 const Navigation = styled.nav`
   background: white;
   display: flex;
-  padding: 15px 15px 0 15px;
+  padding: 15px;
   border-bottom: 1px solid #c6c6c6;
 `
 const Dropdown = styled.ul`` // Styles are in header.module.css due to specificity issues for conditional rendering
@@ -17,7 +17,6 @@ const TopMenuBar = styled.div`
   display: flex;
   justify-content: space-between;
   flex-basis: 15%;
-  padding-bottom: 15px;
 `
 const MenuItems = styled.li`
   text-align: center;
