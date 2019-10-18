@@ -29,20 +29,12 @@ const EmailField = styled.input`
 const Button = styled.input`
   width: 250px;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   border: none;
-  background-color: var(--bright);
-  -webkit-box-shadow: 0 1px 4px var(--black);
-  box-shadow: 0 1px 4px var(--black);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  background-color: #ff7000;
+  -webkit-box-shadow: 0 1px 4px #323232;
+  box-shadow: 0 1px 4px #323232;
+  text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
   color: white;
