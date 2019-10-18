@@ -8,6 +8,10 @@
   justify-content: space-evenly;
   flex-basis: 85%;
  }
+
+ .topMenuBar {
+  flex-basis: 15%;
+ }
 }
 
 @media screen and (max-width: 767px) {
@@ -16,7 +20,7 @@
   background: white;
   display: flex;
   flex-direction: column;
-  padding: 15px 15px 0 15px;
+  padding: 15px;
   border-bottom: 1px solid #c6c6c6;
  }
 
@@ -26,18 +30,12 @@
   display: none;
  }
 
- .topMenuBar {
-  padding-bottom: 15px;
- }
-
  .menuItems {
-  padding-top: 5px;
-  padding-left: 25px;
-  font-weight: 200;
+  padding-top: 10px;
  }
 }
 
 .menuItems>a {
- font-weight: 200;
+ font-weight: 400;
  color: var(--black);
 }

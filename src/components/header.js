@@ -16,12 +16,10 @@ const Dropdown = styled.ul`` // Styles are in header.module.css due to specifici
 const TopMenuBar = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-basis: 15%;
 `
 const MenuItems = styled.li`
   text-align: center;
   padding-bottom: 15px;
-  font-weight: 200;
 `
 // Inline styles for images
 const LogoStyle = {
