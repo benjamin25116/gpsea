@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import css from "./header.module.css"
-import MenuIcon from "./menuIcon"
+import Image from "./image"
 
 // Styled Components
 const Navigation = styled.nav`
@@ -46,14 +46,14 @@ const Header = () => {
     <Navigation className={css.navigation}>
       <TopMenuBar className={css.topMenuBar}>
         <Link to="/">
-          <MenuIcon originalName="gpsea-logo-long.png" style={LogoStyle} />
+          <Image originalName="gpsea-logo-long.png" style={LogoStyle} />
         </Link>
         <button
           onClick={clickHandler}
           id="menu-button"
           className={css.menuButton}
         >
-          <MenuIcon originalName="menu-icon.png" style={HamburgerStyle} />
+          <Image originalName="menu-icon.png" style={HamburgerStyle} />
         </button>
       </TopMenuBar>
       <Dropdown id="menu-dropdown" className={css.dropdown}>
