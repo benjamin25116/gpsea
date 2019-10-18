@@ -4,14 +4,23 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import LinkedBanner from "../components/linkedBanner"
 import styled from "styled-components"
+import VideoCard from "../components/videoCard"
 
 const TextContainer = styled.article`
-  padding: 40px;
+  position: relative;
+  top: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 400px;
 `
 const TextBody = styled.p`
   text-align: center;
   font-weight: bold;
   color: var(--bright);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
 `
 const SectionTitle = styled.h2`
   color: var(--black);
@@ -19,19 +28,6 @@ const SectionTitle = styled.h2`
   padding: 40px;
   text-align: center;
   margin: 0;
-`
-const VideoTitle = styled.h3`
-  color: var(--bright);
-  font-size: 1.4rem;
-  text-align: center;
-  margin: 0;
-`
-const Video = styled.iframe`
-  width: 100vw;
-  height: calc(100vw / 16 * 9);
-  border: none;
-  box-shadow: 0 1px 4px var(--black);
-  margin-bottom: 20px;
 `
 
 const IndexPage = () => (
@@ -58,24 +54,18 @@ const IndexPage = () => (
       linkTo="/what-is-godly-play"
     />
     <SectionTitle>Watch a story being told</SectionTitle>
-    <VideoTitle>The Advent</VideoTitle>
-    <Video
+    <VideoCard
+      title="The Advent"
       src="https://www.youtube.com/embed/zgbJIEkZYvQ"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></Video>
-    <VideoTitle>The Great Pearl</VideoTitle>
-    <Video
+    />
+    <VideoCard
+      title="The Great Pearl"
       src="https://www.youtube.com/embed/h-b3T7HfXYY"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></Video>
-    <VideoTitle>The Ten Best Ways</VideoTitle>
-    <Video
+    />
+    <VideoCard
+      title="The Ten Best Ways"
       src="https://www.youtube.com/embed/hkjXX2xjTkg"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></Video>
+    />
     <Subscribe />
   </Layout>
 )

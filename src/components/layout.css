@@ -101,3 +101,8 @@ h3 {
   margin-bottom: 1.3rem;
   font-weight: bold;
 }
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}

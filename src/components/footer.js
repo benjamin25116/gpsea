@@ -13,11 +13,15 @@ const MainContainer = styled.footer`
 const TopContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
 `
 const BottomContainer = styled.div`
   font-size: 0.8rem;
   color: var(--black);
+  max-width: 1024px;
+  margin: 0 auto;
 `
 const linkStyle = {
   fontWeight: "700",

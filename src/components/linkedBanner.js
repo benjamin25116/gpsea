@@ -12,10 +12,10 @@ const Container = styled.article`
   box-shadow: 0 1px 4px var(--black);
 `
 const Title = styled.h2`
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   color: white;
   text-shadow: 1px 1px 4px var(--black);
-  max-width: 350px;
+  max-width: 450px;
   padding: 20px 15px 10px 15px;
 `
 const Body = styled.p`
