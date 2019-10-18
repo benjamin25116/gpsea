@@ -30,6 +30,13 @@ const SectionTitle = styled.h2`
   text-align: center;
   margin: 0;
 `
+const VideoSection = styled.article`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100vw;
+  max-width: 1024px;
+`
 
 const IndexPage = () => (
   <Layout>
@@ -55,18 +62,20 @@ const IndexPage = () => (
       linkTo="/what-is-godly-play"
     />
     <SectionTitle>Watch a story being told</SectionTitle>
-    <VideoCard
-      title="The Advent"
-      src="https://www.youtube.com/embed/zgbJIEkZYvQ"
-    />
-    <VideoCard
-      title="The Great Pearl"
-      src="https://www.youtube.com/embed/h-b3T7HfXYY"
-    />
-    <VideoCard
-      title="The Ten Best Ways"
-      src="https://www.youtube.com/embed/hkjXX2xjTkg"
-    />
+    <VideoSection>
+      <VideoCard
+        title="The Advent"
+        src="https://www.youtube.com/embed/zgbJIEkZYvQ"
+      />
+      <VideoCard
+        title="The Great Pearl"
+        src="https://www.youtube.com/embed/h-b3T7HfXYY"
+      />
+      <VideoCard
+        title="The Ten Best Ways"
+        src="https://www.youtube.com/embed/hkjXX2xjTkg"
+      />
+    </VideoSection>
     <Subscribe />
   </Layout>
 )

@@ -9,3 +9,9 @@
  top: calc(100% / 2);
  transform: translateY(-50%);
 }
+
+@media screen and (min-width: 415px) {
+ .textWrapper {
+  margin-left: 40px;
+ }
+}
