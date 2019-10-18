@@ -9,7 +9,7 @@ const Navigation = styled.nav`
   background: white;
   display: flex;
   padding: 15px 15px 0 15px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #c6c6c6;
 `
 const Dropdown = styled.ul`` // Styles are in header.module.css due to specificity issues for conditional rendering
 
