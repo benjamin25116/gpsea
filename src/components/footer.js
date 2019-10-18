@@ -7,7 +7,7 @@ import styled from "styled-components"
 const MainContainer = styled.footer`
   background-color: var(--white);
   padding: 20px 15px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   border-top: 1px solid #c6c6c6;
 `
 const TopContainer = styled.div`
@@ -16,7 +16,8 @@ const TopContainer = styled.div`
   justify-content: space-evenly;
 `
 const BottomContainer = styled.div`
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  color: var(--black);
 `
 const linkStyle = {
   fontWeight: "700",
