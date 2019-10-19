@@ -33,17 +33,33 @@ const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-
 const Subscribe = () => (
-  <Container action="" className={css.container}>
+  <Container
+    name="subscribe"
+    method="post"
+    className={css.container}
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    action="/about"
+  >
+    <input type="hidden" name="form-name" value="subscribe" />
     <Title htmlFor="email" className={css.title}>
       Subscribe for updates on training dates and news on Godly Play in South
       East Asia.
     </Title>
     <InputWrapper className={css.inputWrapper}>
       <EmailField type="email" placeholder="your email" id="email" />
+      <p hidden>
+        <label htmlFor="">
+          Don't fill this out please.
+          <input name="bot-field" />
+        </label>
+      </p>
       <button type="submit">
-        <Button name="Subscribe Now" style={{ width: "250px" }} />
+        <Button
+          name="Subscribe Now"
+          style={{ width: "250px", fontSize: "1rem" }}
+        />
       </button>
     </InputWrapper>
   </Container>
