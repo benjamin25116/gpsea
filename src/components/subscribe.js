@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import css from "./subscribe.module.css"
 
 const Container = styled.form`
   padding: 20px 15px 40px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid #c6c6c6;
 `
 const Title = styled.label`
   font-weight: bold;
@@ -39,15 +41,21 @@ const Button = styled.input`
   font-size: 1.2rem;
   color: white;
 `
+const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 const Subscribe = () => (
-  <Container action="">
-    <Title htmlFor="email">
+  <Container action="" className={css.container}>
+    <Title htmlFor="email" className={css.title}>
       Subscribe for updates on training dates and news on Godly Play in South
       East Asia.
     </Title>
-    <EmailField type="email" placeholder="your email" id="email" />
-    <Button type="submit" value="Subscribe Now" />
+    <InputWrapper className={css.inputWrapper}>
+      <EmailField type="email" placeholder="your email" id="email" />
+      <Button type="submit" value="Subscribe Now" />
+    </InputWrapper>
   </Container>
 )
 

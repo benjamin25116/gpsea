@@ -1,0 +1,15 @@
+@media screen and (min-width: 600px) {
+ .inputWrapper {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .container {
+  flex-direction: row;
+  justify-content: center;
+ }
+
+ .title {
+  text-align: left;
+ }
+}
