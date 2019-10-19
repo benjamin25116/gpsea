@@ -31,6 +31,7 @@ const imageStyle = {
   width: "100vw",
   marginBottom: "20px",
 }
+
 const About = () => (
   <Layout>
     <TopTitle>Who Is Godly Play South East Asia?</TopTitle>
@@ -44,7 +45,7 @@ const About = () => (
       <Image
         originalName="about-training.png"
         style={imageStyle}
-        className={css.image}
+        className={css.image1}
       />
     </Container>
 
@@ -53,7 +54,7 @@ const About = () => (
       <Image
         originalName="about-ncc.png"
         style={imageStyle}
-        className={css.image}
+        className={css.image2}
       />
       <div className={css.textWrapper}>
         <Body className={css.text}>
