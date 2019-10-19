@@ -1,0 +1,14 @@
+@media screen and (min-width: 600px) {
+ .text {
+  flex-basis: 60%;
+ }
+
+ .image {
+  flex-basis: calc(40% - 30px);
+  height: calc((40% - 30px) * 0.75);
+ }
+
+ .textWrapper {
+  flex-basis: calc(60% + 30px);
+ }
+}
