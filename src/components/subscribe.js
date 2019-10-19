@@ -12,7 +12,7 @@ const Title = styled.label`
   font-size: 1.2rem;
   color: var(--black);
   text-align: center;
-  width: 300px;
+  width: 250px;
   margin-bottom: 20px;
 `
 const EmailField = styled.input`
