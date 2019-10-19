@@ -48,7 +48,12 @@ const Subscribe = () => (
       East Asia.
     </Title>
     <InputWrapper className={css.inputWrapper}>
-      <EmailField type="email" placeholder="your email" id="email" />
+      <EmailField
+        type="email"
+        name="email"
+        placeholder="your email"
+        id="email"
+      />
       <p hidden>
         <label htmlFor="">
           Don't fill this out please.
