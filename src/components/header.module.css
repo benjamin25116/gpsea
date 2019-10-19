@@ -12,6 +12,10 @@
  .topMenuBar {
   flex-basis: 15%;
  }
+
+ .navigation {
+  padding-bottom: 0;
+ }
 }
 
 @media screen and (max-width: 767px) {
