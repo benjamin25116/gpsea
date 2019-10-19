@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import css from "./subscribe.module.css"
+import Button from "./button"
 
 const Container = styled.form`
   padding: 20px 15px 40px 15px;
@@ -28,19 +29,6 @@ const EmailField = styled.input`
   font-weight: 200;
   margin-bottom: 20px;
 `
-const Button = styled.input`
-  width: 250px;
-  height: 50px;
-  border-radius: 0.3rem;
-  border: none;
-  background-color: #ff7000;
-  -webkit-box-shadow: 0 1px 4px #323232;
-  box-shadow: 0 1px 4px #323232;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: white;
-`
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -54,7 +42,9 @@ const Subscribe = () => (
     </Title>
     <InputWrapper className={css.inputWrapper}>
       <EmailField type="email" placeholder="your email" id="email" />
-      <Button type="submit" value="Subscribe Now" />
+      <button type="submit">
+        <Button name="Subscribe Now" style={{ width: "250px" }} />
+      </button>
     </InputWrapper>
   </Container>
 )
