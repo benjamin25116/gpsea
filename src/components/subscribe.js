@@ -1,14 +1,18 @@
 import React from "react"
 import styled from "styled-components"
-import css from "./subscribe.module.css"
 import Button from "./button"
 
 const Container = styled.form`
   padding: 20px 15px 40px 15px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   border-top: 1px solid #c6c6c6;
+
+  @media screen and (min-width: 530px) {
+    flex-direction: row;
+  }
 `
 const Title = styled.label`
   font-weight: bold;
@@ -17,6 +21,10 @@ const Title = styled.label`
   text-align: center;
   width: 250px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 530px) {
+    text-align: left;
+  }
 `
 const EmailField = styled.input`
   border-radius: 5px;
@@ -37,17 +45,16 @@ const Subscribe = () => (
   <Container
     name="subscribe"
     method="post"
-    className={css.container}
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     action="/about"
   >
     <input type="hidden" name="form-name" value="subscribe" />
-    <Title htmlFor="email" className={css.title}>
+    <Title htmlFor="email">
       Subscribe for updates on training dates and news on Godly Play in South
       East Asia.
     </Title>
-    <InputWrapper className={css.inputWrapper}>
+    <InputWrapper>
       <EmailField
         type="email"
         name="email"
