@@ -3,7 +3,11 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 100vw;
-  max-width: 370px;
+  height: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100vw / 2) - 30px);
+  }
 `
 
 const VideoTitle = styled.h3`
@@ -14,12 +18,15 @@ const VideoTitle = styled.h3`
 `
 const Video = styled.iframe`
   width: inherit;
-  max-width: inherit;
   height: calc(100vw / 16 * 9);
-  max-height: calc(370px / 16 * 9);
   border: none;
   box-shadow: 0 1px 4px var(--black);
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100vw / 2) - 30px);
+    height: calc(((100vw / 2) - 30px) / 16 * 9);
+  }
 `
 const VideoCard = props => (
   <Container>
