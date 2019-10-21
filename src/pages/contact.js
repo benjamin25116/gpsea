@@ -7,7 +7,6 @@ import Image from "../components/image"
 
 const Title = styled.h2`
   margin: 25px 15px;
-  font-size: 1.7rem;
 `
 const Body = styled.p`
   margin: 25px 15px;
@@ -19,6 +18,7 @@ const Social = styled.div`
   justify-content: space-between;
 `
 const OuterWrapper = styled.div`
+  margin-bottom: 40px;
   @media screen and (min-width: 768px) {
     display: flex;
   }

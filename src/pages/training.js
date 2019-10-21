@@ -15,7 +15,10 @@ const Body = styled.p`
 const Training = () => (
   <Layout>
     <SEO title="Training" />
-    <Image originalName="2018-training.png" style={{ maxHeight: "400px" }} />
+    <Image
+      originalName="2018-training.png"
+      style={{ maxHeight: "400px", boxShadow: "0 1px 4px var(--black)" }}
+    />
     <Title>
       Godly Play Training in Kuala Lumpur:{" "}
       <span style={{ color: "var(--bright)" }}>Watch This Space!</span>

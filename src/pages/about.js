@@ -6,7 +6,7 @@ import styled from "styled-components"
 import css from "./about.module.css"
 import SEO from "../components/seo"
 
-const TopTitle = styled.h1`
+const TopTitle = styled.h2`
   color: var(--black);
   margin: 20px 15px;
   font-size: 1.8rem;
@@ -31,6 +31,7 @@ const Container = styled.div`
 const imageStyle = {
   width: "100vw",
   marginBottom: "20px",
+  boxShadow: "0 1px 4px var(--black)",
 }
 
 const About = () => (

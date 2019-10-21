@@ -6,20 +6,18 @@ import styled from "styled-components"
 import css from "./what.module.css"
 import SEO from "../components/seo"
 
-const Title = styled.h1`
+const Title = styled.h2`
   color: var(--black);
   margin: 20px 15px;
-  font-size: 1.8rem;
 `
 const Paragraph = styled.p`
   color: var(--black);
   margin: 0 15px 20px 15px;
-  font-size: 1.15rem;
-  line-height: 1.7rem;
 `
 const imageStyle = {
   width: "100%",
   marginBottom: "20px",
+  boxShadow: "0 1px 4px var(--black)",
 }
 
 const WhatIsGodlyPlay = () => (

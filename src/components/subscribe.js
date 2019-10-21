@@ -20,6 +20,7 @@ const Title = styled.label`
   color: var(--black);
   text-align: center;
   width: 250px;
+  padding: 0 15px;
   margin-bottom: 20px;
 
   @media screen and (min-width: 530px) {
