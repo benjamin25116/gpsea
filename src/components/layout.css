@@ -30,6 +30,11 @@ a {
   cursor: pointer;
 }
 
+a:focus,
+a:hover {
+  color: var(--bright);
+}
+
 button {
   background-color: transparent;
   color: inherit;
@@ -65,10 +70,12 @@ h6 {
   margin: 0;
   font-size: inherit;
   font-weight: inherit;
+  color: var(--black)
 }
 
 p {
   margin: 0;
+  color: var(--black)
 }
 
 cite {
@@ -105,4 +112,19 @@ h3 {
 main {
   max-width: 1024px;
   margin: 0 auto;
+}
+
+/** Sticky footer on Layout **/
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-main {
+  flex-grow: 1;
+}
+
+.layout-footer {
+  flex-shrink: 0;
 }
