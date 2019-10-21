@@ -54,12 +54,12 @@ const Footer = () => {
         <Link style={linkStyle} to="/training">
           Training
         </Link>
-        <Link style={linkStyle} to="/blog">
+        {/* <Link style={linkStyle} to="/blog">
           Blog
         </Link>
         <Link style={linkStyle} to="/gallery">
           Gallery
-        </Link>
+        </Link> */}
         <Link style={linkStyle} to="/contact">
           Contact
         </Link>

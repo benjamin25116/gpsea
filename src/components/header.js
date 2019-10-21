@@ -71,12 +71,12 @@ const Header = () => {
           <MenuItems className={css.menuItems}>
             <Link to="/training">Training</Link>
           </MenuItems>
-          <MenuItems className={css.menuItems}>
+          {/* <MenuItems className={css.menuItems}>
             <Link to="/blog">Blog</Link>
           </MenuItems>
           <MenuItems className={css.menuItems}>
             <Link to="/gallery">Gallery</Link>
-          </MenuItems>
+          </MenuItems> */}
           <MenuItems className={css.menuItems}>
             <Link to="/contact">Contact</Link>
           </MenuItems>
