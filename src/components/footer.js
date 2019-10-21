@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import css from "./footer.module.css"
 import styled from "styled-components"
 
 const MainContainer = styled.footer`
@@ -65,7 +64,7 @@ const Footer = () => {
           Contact
         </Link>
       </TopContainer>
-      <BottomContainer className={css.BottomContainer}>
+      <BottomContainer>
         © {new Date().getFullYear()}, {data.site.siteMetadata.title}. Built by
         {` `}
         _pitchun
