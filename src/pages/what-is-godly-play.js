@@ -4,6 +4,7 @@ import Image from "../components/image"
 import Subscribe from "../components/subscribe"
 import styled from "styled-components"
 import css from "./what.module.css"
+import SEO from "../components/seo"
 
 const Title = styled.h1`
   color: var(--black);
@@ -23,6 +24,7 @@ const imageStyle = {
 
 const WhatIsGodlyPlay = () => (
   <Layout>
+    <SEO title="What is Godly Play" />
     <Title>What is Godly Play?</Title>
     <Paragraph>
       Godly Play has its roots in the Montessori philosophy of child

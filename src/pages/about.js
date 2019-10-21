@@ -4,6 +4,7 @@ import Image from "../components/image"
 import Subscribe from "../components/subscribe"
 import styled from "styled-components"
 import css from "./about.module.css"
+import SEO from "../components/seo"
 
 const TopTitle = styled.h1`
   color: var(--black);
@@ -34,6 +35,7 @@ const imageStyle = {
 
 const About = () => (
   <Layout>
+    <SEO title="About" />
     <TopTitle>Who Is Godly Play South East Asia?</TopTitle>
     <Container>
       <Body className={css.text}>
