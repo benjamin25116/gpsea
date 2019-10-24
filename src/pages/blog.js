@@ -14,7 +14,7 @@ const PostCard = styled.div`
   margin: 25px;
   height: 200px;
   border-radius: 5px;
-  background-color: #efefef;
+  background-color: hsl(27, 35%, 98%);
   display: flex;
   box-shadow: 3px 4px 8px 0 grey;
 `
@@ -29,11 +29,11 @@ const PostTitle = styled.h2`
   margin-bottom: 8px;
 `
 const PostSubTitle = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 400;
 `
 const PostMeta = styled.p`
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   font-style: italic;
   margin: 8px 0;
@@ -64,6 +64,10 @@ const Blog = () => {
             }
             excerpt
             timeToRead
+            id
+            fields {
+              slug
+            }
           }
         }
       }
@@ -74,30 +78,22 @@ const Blog = () => {
     <Layout>
       <SEO title="Blog" />
       <PageTitle>Articles On Godly Play</PageTitle>
-      <Link to="/blog">
-        <PostCard>
-          <PostThumbnail
-            src={data.allMarkdownRemark.edges[0].node.frontmatter.thumbnail}
-            alt="Some data"
-          />
-          <PostText>
-            <PostTitle>
-              {data.allMarkdownRemark.edges[0].node.frontmatter.title}
-            </PostTitle>
-            <PostSubTitle>
-              {data.allMarkdownRemark.edges[0].node.frontmatter.subtitle}
-            </PostSubTitle>
-            <PostMeta>
-              By {data.allMarkdownRemark.edges[0].node.frontmatter.author} •{" "}
-              {data.allMarkdownRemark.edges[0].node.frontmatter.date} •{" "}
-              {data.allMarkdownRemark.edges[0].node.timeToRead} min read
-            </PostMeta>
-            <PostExcerpt>
-              {data.allMarkdownRemark.edges[0].node.excerpt}
-            </PostExcerpt>
-          </PostText>
-        </PostCard>
-      </Link>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <Link to={`/blog/${node.fields.slug}`} key={node.id}>
+          <PostCard>
+            <PostThumbnail src={node.frontmatter.thumbnail} alt="Some data" />
+            <PostText>
+              <PostTitle>{node.frontmatter.title}</PostTitle>
+              <PostSubTitle>{node.frontmatter.subtitle}</PostSubTitle>
+              <PostMeta>
+                By {node.frontmatter.author} • {node.frontmatter.date} •{" "}
+                {node.timeToRead} min read
+              </PostMeta>
+              <PostExcerpt>{node.excerpt}</PostExcerpt>
+            </PostText>
+          </PostCard>
+        </Link>
+      ))}
     </Layout>
   )
 }

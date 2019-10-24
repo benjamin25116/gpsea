@@ -67,7 +67,7 @@ const Footer = () => {
       <BottomContainer>
         © {new Date().getFullYear()}, {data.site.siteMetadata.title}. Built by
         {` `}
-        _pitchun
+        <a href="https://github.com/benjamin25116">Benjamin Yap</a>
       </BottomContainer>
     </MainContainer>
   )
