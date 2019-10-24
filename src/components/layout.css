@@ -108,6 +108,7 @@ h3 {
 main {
   max-width: 1024px;
   margin: 0 auto;
+  width: 100vw;
 }
 
 /** Sticky footer on Layout **/

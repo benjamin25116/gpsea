@@ -3,6 +3,8 @@ import React from "react"
 import styled from "styled-components"
 import css from "./header.module.css"
 import Image from "./image"
+import Logo from "../images/svg-logo.svg"
+// import Img from "gatsby"
 
 // Styled Components
 const Wrapper = styled.div`
@@ -48,7 +50,11 @@ const Header = () => {
       <Navigation className={css.navigation}>
         <TopMenuBar className={css.topMenuBar}>
           <Link to="/">
-            <Image originalName="gpsea-logo-long.png" style={LogoStyle} />
+            <img
+              src={Logo}
+              alt="Godly Play South East Asia"
+              style={LogoStyle}
+            />
           </Link>
           <h1 style={{ position: "absolute", visibility: "hidden" }}>
             Godly Play South East Asia
