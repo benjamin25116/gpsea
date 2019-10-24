@@ -15,20 +15,21 @@ export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-150488677-1"
     />,
-     <script
-     dangerouslySetInnerHTML={{
-        __html=`
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-150488677-1');
-   	 `
-     }}
-     />
-  ]);
+   	 `,
+      }}
+    />,
+  ])
   setPostBodyComponents([
-	<script
- dangerouslySetInnerHTML={{__html=` if (window.netlifyIdentity) {
+    <script
+      dangerouslySetInnerHTML={{
+        __html: ` if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
       if (!user) {
         window.netlifyIdentity.on("login", () => {
@@ -36,8 +37,8 @@ export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
         });
       }
     });
-  }`}}
- />,
-]);
+  }`,
+      }}
+    />,
+  ])
 }
-
