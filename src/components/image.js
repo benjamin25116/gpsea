@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const MenuIcon = props => {
+const Image = ({ imgStyle, alt, className, originalName }) => {
   const data = useStaticQuery(graphql`
     {
       allImageSharp {
@@ -19,7 +19,7 @@ const MenuIcon = props => {
   `)
 
   const image = data.allImageSharp.edges.find(({ node }) => {
-    return node.fluid.originalName.includes(props.originalName)
+    return node.fluid.originalName.includes(originalName)
   })
   if (!image) {
     return null
@@ -27,12 +27,13 @@ const MenuIcon = props => {
 
   return (
     <Img
-      className={props.className}
-      alt={props.alt}
+      className={className}
+      alt={alt}
       fluid={image.node.fluid}
-      style={props.style}
+      imgStyle={imgStyle}
+      style={{ height: "100%" }}
     />
   )
 }
 
-export default MenuIcon
+export default Image

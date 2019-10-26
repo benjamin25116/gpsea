@@ -5,14 +5,14 @@ import styled from "styled-components"
 
 const MainContainer = styled.footer`
   background-color: var(--white);
-  padding: 20px 15px;
+  padding: 1.5rem;
   font-size: 0.85rem;
   border-top: 1px solid #c6c6c6;
 `
 const TopContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
   max-width: 1024px;
   margin: 0 auto;
 `
@@ -25,8 +25,8 @@ const BottomContainer = styled.div`
 const linkStyle = {
   fontWeight: "700",
   color: "var(--black)",
-  paddingRight: "20px",
-  paddingBottom: "15px",
+  paddingRight: "2.5rem",
+  paddingBottom: "1.5rem",
 }
 
 const Footer = () => {
@@ -54,9 +54,10 @@ const Footer = () => {
         <Link style={linkStyle} to="/training">
           Training
         </Link>
-        {/* <Link style={linkStyle} to="/blog">
+        <Link style={linkStyle} to="/blog">
           Blog
         </Link>
+        {/* 
         <Link style={linkStyle} to="/gallery">
           Gallery
         </Link> */}

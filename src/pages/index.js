@@ -2,17 +2,17 @@ import React from "react"
 import Subscribe from "../components/subscribe"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import LinkedBanner from "../components/linkedBanner"
+import LinkedBanner from "../components/linked-banner/linkedBanner"
 import styled from "styled-components"
 import VideoCard from "../components/videoCard"
 
-const TextContainer = styled.article`
+const TextContainer = styled.section`
   position: relative;
   top: 0;
-  width: calc(100vw - 30px);
-  max-width: 600px;
+  width: calc(100vw - 1.5rem);
+  max-width: 1024px;
   margin: 0 auto;
-  min-height: 400px;
+  min-height: 500px;
 `
 const TextBody = styled.p`
   text-align: center;
@@ -22,18 +22,15 @@ const TextBody = styled.p`
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
+  line-height: 2.8rem;
 `
 const SectionTitle = styled.h2`
-  color: var(--black);
-  font-size: 1.8rem;
-  padding: 40px;
+  margin-top: 2.5rem;
   text-align: center;
-  margin: 0;
 `
 const VideoSection = styled.article`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   width: 100vw;
   max-width: 1024px;
 `
@@ -61,7 +58,7 @@ const IndexPage = () => (
       buttonName="Read More"
       linkTo="/what-is-godly-play"
     />
-    <SectionTitle>Watch a story being told</SectionTitle>
+    <SectionTitle>Watch a Story</SectionTitle>
     <VideoSection>
       <VideoCard
         title="The Advent"

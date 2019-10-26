@@ -1,14 +1,17 @@
 import React from "react"
 import styled from "styled-components"
-import Button from "./button"
 
+// Styled-Components
 const Container = styled.form`
-  padding: 20px 15px 40px 15px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   border-top: 1px solid #c6c6c6;
+  padding: 1.5rem;
+
+  @media screen and (max-width: 529px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
   @media screen and (min-width: 530px) {
     flex-direction: row;
@@ -17,14 +20,12 @@ const Container = styled.form`
 const Title = styled.label`
   font-weight: bold;
   font-size: 1.2rem;
-  color: var(--black);
   text-align: center;
-  width: 250px;
-  padding: 0 15px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 
   @media screen and (min-width: 530px) {
     text-align: left;
+    margin-right: 1.5rem;
   }
 `
 const EmailField = styled.input`
@@ -36,12 +37,37 @@ const EmailField = styled.input`
   padding-left: 15px;
   font-size: 0.8rem;
   font-weight: 200;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
+
+// End of Styled-components
+
+const buttonStyle = {
+  padding: "10px 25px",
+  fontSize: "1rem",
+  fontWeight: "bold",
+  backgroundColor: "var(--bright)",
+  borderRadius: "5px",
+  boxShadow: "0 2px 4px var(--black)",
+  textAlign: "center",
+  color: "white",
+}
+function handleEvent() {
+  if (
+    document.getElementById("subscribe-button").style.backgroundColor ===
+    "var(--bright)"
+  ) {
+    document.getElementById("subscribe-button").style.backgroundColor =
+      "var(--light)"
+  } else {
+    document.getElementById("subscribe-button").style.backgroundColor =
+      "var(--bright)"
+  }
+}
 const Subscribe = () => (
   <Container
     name="subscribe"
@@ -68,11 +94,15 @@ const Subscribe = () => (
           <input name="bot-field" />
         </label>
       </p>
-      <button type="submit">
-        <Button
-          name="Subscribe Now"
-          style={{ width: "250px", fontSize: "1rem" }}
-        />
+
+      <button
+        type="submit"
+        id="subscribe-button"
+        style={buttonStyle}
+        onMouseEnter={handleEvent}
+        onMouseLeave={handleEvent}
+      >
+        Subscribe Now
       </button>
     </InputWrapper>
   </Container>
