@@ -74,7 +74,7 @@ const Subscribe = () => (
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    action="/about"
+    action="/thank-you"
   >
     <input type="hidden" name="form-name" value="subscribe" />
     <Title htmlFor="email">
@@ -87,6 +87,7 @@ const Subscribe = () => (
         name="email"
         placeholder="your email"
         id="email"
+        required
       />
       <p hidden>
         <label htmlFor="">
