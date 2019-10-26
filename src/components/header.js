@@ -24,7 +24,18 @@ const Navigation = styled.nav`
     flex-direction: column;
   }
 `
+const TopMenuBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: 15%;
+  }
+`
 const MenuButton = styled.button`
+  height: 20px;
+  width: 20px;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -40,14 +51,6 @@ const Dropdown = styled.ul`
   @media screen and (max-width: 767px) {
     flex-direction: column;
     display: none;
-  }
-`
-const TopMenuBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  @media screen and (min-width: 768px) {
-    flex-basis: 15%;
   }
 `
 const MenuItems = styled.li`
@@ -69,11 +72,9 @@ const MenuItems = styled.li`
 const LogoStyle = {
   width: "200px",
 }
-const HamburgerStyle = {
-  width: "20px",
-}
 
 // Button function
+
 function clickHandler() {
   if (document.getElementById("menu-dropdown").style.display === "") {
     document.getElementById("menu-dropdown").style.display = "block"
@@ -98,7 +99,7 @@ const Header = () => {
             Godly Play South East Asia
           </h1>
           <MenuButton onClick={clickHandler} id="menu-button">
-            <Image originalName="menu-icon.png" style={HamburgerStyle} />
+            <Image originalName="menu-icon.png" />
           </MenuButton>
         </TopMenuBar>
         <Dropdown id="menu-dropdown">
