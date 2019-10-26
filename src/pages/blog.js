@@ -79,7 +79,7 @@ const Blog = () => {
       <SEO title="Blog" />
       <PageTitle>Articles On Godly Play</PageTitle>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Link to={`/blog/${node.fields.slug}`} key={node.id}>
+        <Link to={`/blog${node.fields.slug}`} key={node.id}>
           <PostCard>
             <PostThumbnail src={node.frontmatter.thumbnail} alt="Some data" />
             <PostText>
