@@ -5,13 +5,13 @@
  */
 
 // You can delete this file if you're not using it
-
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-exports.onCreateNode = ({ node, getNode, actions }) => {
+
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const slug = path.basename(node.fileAbsolutePath, ".md")
+
     createNodeField({
       node,
       name: `slug`,
@@ -22,9 +22,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(
-    `./src/pages/templates/blogpost-template.js`
-  )
+  const blogTemplate = path.resolve(`./src/templates/blogpost-template.js`)
+
   const result = await graphql(`
     query {
       allMarkdownRemark {
@@ -33,20 +32,18 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
-            id
           }
         }
       }
     }
   `)
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
+      component: blogTemplate,
       path: `/blog${node.fields.slug}`,
-      component: blogPostTemplate,
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        id: node.id,
+        slug: node.fields.slug,
       },
     })
   })
