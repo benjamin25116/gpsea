@@ -1,39 +1,49 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import MainTitle from "../components/mainTitle"
 import Image from "../components/image"
 import styled from "styled-components"
 import Subscribe from "../components/subscribe"
 
-const Title = styled.h2`
-  margin: 25px 15px;
+const Container = styled.article`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+  }
 `
-const Body = styled.p`
-  margin: 25px 15px;
+const ImageContainer = styled.div`
+  margin: 0 0 1.5rem;
 `
 
 const Training = () => (
   <Layout>
     <SEO title="Training" />
-    <Image
-      originalName="2018-training.png"
-      style={{ maxHeight: "400px", boxShadow: "0 1px 4px var(--black)" }}
-    />
-    <Title>
+    <MainTitle>
       Godly Play Training in Kuala Lumpur:{" "}
       <span style={{ color: "var(--bright)" }}>Watch This Space!</span>
-    </Title>
-    <Body>
-      We conduct trainings annually for current and potential Godly Play
-      practitioners. For the past 5 years, we have flown in trainers from
-      Australia who comes with a wealth of experience as a trainer as well as as
-      storyteller.
-    </Body>
-    <Body>
-      As soon as training details are finalised, information will be updated on
-      this page. To not miss the latest update on the next training programme,
-      subscribe to receive updates.
-    </Body>
+    </MainTitle>
+    <ImageContainer>
+      <Image
+        originalName="2018-training.png"
+        alt="Training participants taking a group photo with the facilitators."
+      />
+    </ImageContainer>
+    <Container>
+      <p>
+        We conduct trainings annually for current and potential Godly Play
+        practitioners. For the past 5 years, we have flown in trainers from
+        Australia who comes with a wealth of experience as a trainer as well as
+        as storyteller.
+      </p>
+      <p>
+        As soon as training details are finalised, information will be updated
+        on this page. To not miss the latest update on the next training
+        programme, subscribe to receive updates.
+      </p>
+    </Container>
     <Subscribe />
   </Layout>
 )

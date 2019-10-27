@@ -36,14 +36,10 @@ const TextWrapper = styled.div`
 const buttonStyle = {
   marginLeft: "1.5rem",
 }
-const imageStyle = {
-  position: "absolute",
-  top: "0",
-}
 
 const LinkedBanner = ({ imageName, title, body, linkTo, buttonName }) => (
   <Container>
-    <Image originalName={imageName} imgStyle={imageStyle} />
+    <Image originalName={imageName} />
     <TextWrapper>
       <Title>{title}</Title>
       <Body>{body}</Body>
