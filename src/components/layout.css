@@ -119,6 +119,11 @@ p {
   line-height: 1.7rem;
 }
 
+ul,
+ol {
+  margin: 0 3rem 1.5rem;
+}
+
 main {
   max-width: 1024px;
   margin: 0 auto;

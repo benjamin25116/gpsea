@@ -21,9 +21,10 @@ const Thumbnail = styled.img`
   }
   @media (max-width: 735px) {
     height: 200px;
+    width: 100%;
   }
 `
-const TextWrapper = styled.div``
+const TextWrapper = styled.section``
 
 const Title = styled.h3`
   font-size: 1.5rem;
@@ -40,6 +41,7 @@ const Subtitle = styled.p`
 const Metadata = styled.p`
   font-size: 0.8rem;
   font-weight: 400;
+  margin-bottom: 0.5rem;
 `
 const Excerpt = styled.p`
   font-size: 1rem;
