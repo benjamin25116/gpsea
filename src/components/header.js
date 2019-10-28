@@ -46,6 +46,7 @@ const Dropdown = styled.ul`
     justify-content: space-evenly;
     flex-basis: 85%;
     flex-direction: row;
+    margin-bottom: 0;
   }
 
   @media screen and (max-width: 767px) {
