@@ -33,18 +33,16 @@ const TopMenuBar = styled.div`
   }
 `
 const MenuButton = styled.button`
-  height: 20px;
-  width: 20px;
-  font-size: 1.5rem;
-  margin: -0.35rem 0.3rem;
+  font-size: 1rem;
   color: grey;
-
+  margin: auto 0;
   @media screen and (min-width: 768px) {
     display: none;
   }
 `
 const Dropdown = styled.ul`
   display: flex;
+  margin: 1rem 0 0;
   @media screen and (min-width: 768px) {
     justify-content: space-evenly;
     flex-basis: 85%;
@@ -59,10 +57,9 @@ const Dropdown = styled.ul`
 `
 const MenuItems = styled.li`
   text-align: center;
-  padding-bottom: 15px;
+  padding: 10px 0;
   list-style: none;
   font-size: 1rem;
-  line-height: 1rem;
 
   @media screen and (max-width: 767px) {
     padding-top: 10px;
@@ -82,17 +79,10 @@ const LogoStyle = {
 function clickHandler() {
   if (document.getElementById("menu-dropdown").style.display === "") {
     document.getElementById("menu-dropdown").style.display = "block"
-    let button = document.getElementById("menu-button")
-    button.innerHTML = "&#10799;"
-    button.style.fontSize = "3rem"
-    button.style.marginTop = "-1.8rem"
-    button.style.fontWeight = "200"
+    document.getElementById("menu-button").innerHTML = "X"
   } else {
     document.getElementById("menu-dropdown").style.display = ""
-    let button = document.getElementById("menu-button")
-    button.innerHTML = "&#9776;"
-    button.style.fontSize = "1.5rem"
-    button.style.margin = "-0.35rem 0.3rem"
+    document.getElementById("menu-button").innerHTML = "&#9776;"
   }
 }
 
@@ -101,7 +91,13 @@ const Header = () => {
     <Wrapper>
       <Navigation>
         <TopMenuBar>
-          <Link to="/">
+          <Link
+            to="/"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <img
               src={Logo}
               alt="Godly Play South East Asia"
