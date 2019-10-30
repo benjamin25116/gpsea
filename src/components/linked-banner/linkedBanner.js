@@ -8,7 +8,7 @@ import styled from "styled-components"
 const Container = styled.section`
   height: 500px;
   position: relative;
-  box-shadow: 0 1px 4px var(--black);
+  // box-shadow: 0 1px 4px var(--black);
 `
 const Title = styled.h2`
   color: white;

@@ -7,7 +7,7 @@ const Container = styled.article`
   background-color: hsl(27, 35%, 98%);
   display: flex;
   flex-flow: column wrap;
-  box-shadow: 3px 4px 8px 0 grey;
+  box-shadow: 1px 2px 2px 0 grey;
 
   @media (min-width: 736px) {
     flex-flow: row;

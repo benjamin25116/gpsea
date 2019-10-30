@@ -16,7 +16,7 @@ const Video = styled.iframe`
   min-height: 150px;
   max-height: 500px;
   border: none;
-  box-shadow: 0 1px 4px var(--black);
+  // box-shadow: 0 1px 4px var(--black);
 `
 const VideoCard = ({ title, src }) => (
   <Container>
