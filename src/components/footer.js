@@ -57,10 +57,10 @@ const Footer = () => {
         <Link style={linkStyle} to="/blog">
           Blog
         </Link>
-        {/* 
+
         <Link style={linkStyle} to="/gallery">
           Gallery
-        </Link> */}
+        </Link>
         <Link style={linkStyle} to="/contact">
           Contact
         </Link>

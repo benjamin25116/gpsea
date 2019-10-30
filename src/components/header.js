@@ -17,7 +17,7 @@ const Navigation = styled.nav`
 
   @media screen and (min-width: 768px) {
     max-width: 1024px;
-    padding-bottom: 0;
+    padding: 0 0 0 15px;
   }
 
   @media screen and (max-width: 767px) {
@@ -47,7 +47,7 @@ const Dropdown = styled.ul`
     justify-content: space-evenly;
     flex-basis: 85%;
     flex-direction: row;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   @media screen and (max-width: 767px) {
@@ -124,9 +124,9 @@ const Header = () => {
           <MenuItems>
             <Link to="/blog">Blog</Link>
           </MenuItems>
-          {/* <MenuItems>
+          <MenuItems>
             <Link to="/gallery">Gallery</Link>
-          </MenuItems> */}
+          </MenuItems>
           <MenuItems>
             <Link to="/contact">Contact</Link>
           </MenuItems>
