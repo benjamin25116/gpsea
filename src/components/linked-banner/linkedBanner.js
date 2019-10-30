@@ -39,7 +39,7 @@ const buttonStyle = {
 
 const LinkedBanner = ({ imageName, title, body, linkTo, buttonName }) => (
   <Container>
-    <Image originalName={imageName} />
+    <Image originalName={imageName} style={{ height: "100%" }} />
     <TextWrapper>
       <Title>{title}</Title>
       <Body>{body}</Body>

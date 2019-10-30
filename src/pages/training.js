@@ -17,7 +17,9 @@ const Container = styled.article`
 const ImageContainer = styled.div`
   margin: 0 0 1.5rem;
 `
-
+const imageStyle = {
+  height: "100%",
+}
 const Training = () => (
   <Layout>
     <SEO title="Training" />
@@ -29,6 +31,7 @@ const Training = () => (
       <Image
         originalName="2018-training.png"
         alt="Training participants taking a group photo with the facilitators."
+        style={imageStyle}
       />
     </ImageContainer>
     <Container>
