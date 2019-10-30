@@ -17,10 +17,10 @@ const Thumbnail = styled.img`
   object-fit: cover;
   border-radius: 5px;
   @media (min-width: 736px) {
-    width: 300px;
+    max-width: 200px;
   }
   @media (max-width: 735px) {
-    height: 200px;
+    max-height: 150px;
     width: 100%;
   }
 `
@@ -47,6 +47,10 @@ const Excerpt = styled.p`
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.2rem;
+
+  @media (max-width: 735px) {
+    display: none;
+  }
 `
 
 const BlogCard = ({
