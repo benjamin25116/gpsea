@@ -11,6 +11,9 @@ const ImageContainer = styled.div`
   height: calc(100vw / 2);
   max-height: 480px;
 `
+const imageStyle = {
+  height: "100%",
+}
 
 const WhatIsGodlyPlay = () => (
   <Layout>
@@ -29,6 +32,7 @@ const WhatIsGodlyPlay = () => (
         <Image
           originalName="david.png"
           alt="Children listening to a male story teller presenting."
+          style={imageStyle}
         />
       </ImageContainer>
       <p>
@@ -51,6 +55,7 @@ const WhatIsGodlyPlay = () => (
       <Image
         originalName="judyth.png"
         alt="children listening to a female story teller presenting"
+        style={imageStyle}
       />
     </ImageContainer>
     <p>

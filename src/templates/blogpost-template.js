@@ -4,6 +4,7 @@ import Subscribe from "../components/subscribe"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
+import Image from "../components/image"
 
 const Container = styled.div`
   margin: 2.5rem auto;
@@ -27,12 +28,13 @@ const PostMeta = styled.p`
   font-style: italic;
   margin: 0.5rem 1.5rem;
 `
-const Hero = styled.img`
-  width: 100vw;
-  max-width: 1024px;
-  max-height: 400px;
-  object-fit: cover;
-`
+const imageStyle = {
+  width: "100vw",
+  maxWidth: "1024px",
+  maxHeight: "400px",
+  objectFit: "cover",
+}
+
 const Post = styled.article`
   :first-letter {
     font-weight: 700;
@@ -51,6 +53,9 @@ const Post = styled.article`
 `
 
 const BlogpostTemplate = ({ data }) => {
+  let string = data.markdownRemark.frontmatter.thumbnail
+  let imageName = string.slice(8)
+
   const post = data.markdownRemark
   return (
     <Layout>
@@ -63,7 +68,7 @@ const BlogpostTemplate = ({ data }) => {
           {post.timeToRead} {post.timeToRead < 2 ? "min read" : "mins read"}
         </PostMeta>
       </Container>
-      <Hero src={post.frontmatter.thumbnail} alt="post thumbnail" />
+      <Image originalName={imageName} alt={imageName} style={imageStyle} />
       <Container>
         <Post dangerouslySetInnerHTML={{ __html: post.html }} />
 

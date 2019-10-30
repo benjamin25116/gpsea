@@ -18,6 +18,9 @@ const ImageContainer = styled.div`
   height: calc(100vw / 2.5);
   max-height: 350px;
 `
+const imageStyle = {
+  height: "100%",
+}
 const About = () => (
   <Layout>
     <SEO title="About" />
@@ -25,6 +28,7 @@ const About = () => (
       <Image
         originalName="about-training.png"
         alt="Story tellers gathering around a trainer"
+        style={imageStyle}
       />
     </ImageContainer>
     <MainTitle>Who Is Godly Play South East Asia?</MainTitle>
