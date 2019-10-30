@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Image from "../components/image"
 
 const Container = styled.article`
   margin: 1.5rem;
@@ -13,17 +14,25 @@ const Container = styled.article`
     flex-flow: row;
   }
 `
-const Thumbnail = styled.img`
-  object-fit: cover;
-  border-radius: 5px;
+const Thumbnail = styled.div`
   @media (min-width: 736px) {
-    max-width: 200px;
+    width: 100%;
+    height: inherit;
+    max-width: 250px;
   }
   @media (max-width: 735px) {
     max-height: 150px;
     width: 100%;
   }
 `
+const thumbnailStyle = {
+  borderRadius: "5px",
+  objectFit: "cover",
+  maxWidth: "inherit",
+  maxHeight: "inherit",
+  width: "inherit",
+  height: "100%",
+}
 const TextWrapper = styled.section``
 
 const Title = styled.h3`
@@ -64,7 +73,13 @@ const BlogCard = ({
 }) => {
   return (
     <Container>
-      <Thumbnail src={thumbnail} />
+      <Thumbnail>
+        <Image
+          originalName={thumbnail}
+          alt={thumbnail}
+          style={thumbnailStyle}
+        />
+      </Thumbnail>
       <TextWrapper>
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>

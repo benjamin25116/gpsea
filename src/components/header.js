@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import Image from "./image"
 import Logo from "../images/svg-logo.svg"
 
 // Styled Components
