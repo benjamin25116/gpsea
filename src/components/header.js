@@ -35,6 +35,9 @@ const TopMenuBar = styled.div`
 const MenuButton = styled.button`
   height: 20px;
   width: 20px;
+  font-size: 1.5rem;
+  margin: -0.35rem 0.3rem;
+  color: grey;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -79,8 +82,17 @@ const LogoStyle = {
 function clickHandler() {
   if (document.getElementById("menu-dropdown").style.display === "") {
     document.getElementById("menu-dropdown").style.display = "block"
+    let button = document.getElementById("menu-button")
+    button.innerHTML = "&#10799;"
+    button.style.fontSize = "3rem"
+    button.style.marginTop = "-1.8rem"
+    button.style.fontWeight = "200"
   } else {
     document.getElementById("menu-dropdown").style.display = ""
+    let button = document.getElementById("menu-button")
+    button.innerHTML = "&#9776;"
+    button.style.fontSize = "1.5rem"
+    button.style.margin = "-0.35rem 0.3rem"
   }
 }
 
@@ -100,7 +112,7 @@ const Header = () => {
             Godly Play South East Asia
           </h1>
           <MenuButton onClick={clickHandler} id="menu-button">
-            <Image originalName="menu-icon.png" />
+            &#9776;
           </MenuButton>
         </TopMenuBar>
         <Dropdown id="menu-dropdown">
