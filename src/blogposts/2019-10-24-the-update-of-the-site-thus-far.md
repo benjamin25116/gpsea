@@ -3,8 +3,7 @@ title: The Update of the Site Thus Far
 subtitle: We need more time to see how things work out.
 date: 2019-10-24T10:52:02.205Z
 author: Benjamin Yap
-thumbnail: >-
-  https://res.cloudinary.com/benjamin25116/image/upload/c_crop,h_1000,w_1600/v1572522475/10279620_1600x1200_dnzydz.jpg
+thumbnail: /images/ya-group.png
 ---
 
 Monday, August 12. It’s a public holiday in Malaysia. No Monday-blues, or so we thought. I’m driving my car, with a teary-eyed wife by my side, heading home after an incident.

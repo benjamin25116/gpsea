@@ -36,7 +36,7 @@ const Blog = () => {
       <SEO title="Blog" />
       <MainTitle>Articles On Godly Play</MainTitle>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Link to={`/blog${node.fields.slug}`} key={node.id}>
+        <Link to={`/blog/${node.fields.slug}`} key={node.id}>
           <BlogCard
             thumbnail={node.frontmatter.thumbnail.slice(8)}
             title={node.frontmatter.title}
