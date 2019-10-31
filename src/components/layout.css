@@ -25,14 +25,14 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--medium);
+  color: var(--bright);
   font-weight: bold;
   cursor: pointer;
 }
 
 a:focus,
 a:hover {
-  color: var(--bright);
+  color: var(--medium);
 }
 
 button {
