@@ -5,6 +5,14 @@ backend:
 media_folder: static/images
 public_folder: /images
 
+logo_url: https://gpsea.netlify.com/static/svg-logo-d4e9a2e8c7c4b8acd779540f7cd4a8e5.svg
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: benjamin25116
+    api_key: 966248659638383
+
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
@@ -15,6 +23,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "By", name: "author", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
