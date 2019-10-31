@@ -3,7 +3,8 @@ title: Test post from vscode
 subtitle: We need more time to see how things work out.
 date: 2019-10-25T04:52:02.205Z
 author: Benjamin Yap
-thumbnail: /images/ya-group.png
+thumbnail: >-
+  https://res.cloudinary.com/benjamin25116/image/upload/c_crop,h_1020,w_1600/v1572522474/10339096_1600x1200_dbrjry.jpg
 ---
 
 CS50 is currently Harvard’s largest attended lecture at 735 undergraduate enrolees according to The Harvard Crimson, Harvard’s daily college newspaper.
