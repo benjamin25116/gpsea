@@ -6,7 +6,7 @@ import Image from "../components/image"
 const Container = styled.article`
   position: relative;
   max-height: 300px;
-  min-width: 320px;
+  min-width: calc(320px - 3rem);
   margin: 0 1.5rem 1.5rem;
   flex-grow: 1;
 `
