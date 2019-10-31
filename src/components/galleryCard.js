@@ -6,11 +6,14 @@ import Image from "../components/image"
 const Container = styled.article`
   position: relative;
   max-height: 300px;
-  margin: 1.5rem;
-  flex-basis: 1;
+  min-width: 320px;
+  margin: 0 1.5rem 1.5rem;
+  flex-grow: 1;
 `
 const Title = styled.h3`
   width: 100%;
+  margin: 0;
+  background: var(--bright);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -21,6 +24,7 @@ const Title = styled.h3`
 `
 const imageStyle = {
   maxHeight: "300px",
+  borderRadius: "5px",
 }
 
 const GalleryCard = ({ title, imageName, linkTo }) => {

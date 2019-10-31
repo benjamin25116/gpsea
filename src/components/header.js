@@ -14,12 +14,12 @@ const Navigation = styled.nav`
   margin: 0 auto;
   background: white;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 855px) {
     max-width: 1024px;
     padding: 0 0 0 15px;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 854px) {
     flex-direction: column;
   }
 `
@@ -27,7 +27,7 @@ const TopMenuBar = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 855px) {
     flex-basis: 15%;
   }
 `
@@ -35,37 +35,45 @@ const MenuButton = styled.button`
   font-size: 1rem;
   color: grey;
   margin: auto 0;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 855px) {
     display: none;
   }
 `
 const Dropdown = styled.ul`
   display: flex;
   margin: 1rem 0 0;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 855px) {
     justify-content: space-evenly;
     flex-basis: 85%;
     flex-direction: row;
     margin: 0;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 854px) {
     flex-direction: column;
     display: none;
   }
 `
 const MenuItems = styled.li`
   text-align: center;
-  padding: 10px 0;
   list-style: none;
   font-size: 1rem;
+  padding: 6px 0;
 
-  @media screen and (max-width: 767px) {
-    padding-top: 10px;
-  }
   > a {
+    padding: 10px 15px;
     font-weight: 400;
     color: var(--black);
+  }
+
+  > a:hover,
+  .active {
+    background-color: var(--bright);
+    color: var(--white);
+  }
+
+  @media screen and (max-width: 854px) {
+    padding-top: 10px;
   }
 `
 // Inline styles for images

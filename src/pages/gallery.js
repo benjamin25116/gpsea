@@ -8,7 +8,7 @@ import styled from "styled-components"
 const Hero = styled.section`
   max-height: 350px;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
   position: relative;
 `
 const MainTitle = styled.h2`
@@ -26,12 +26,10 @@ const MainTitle = styled.h2`
 const imageStyle = {
   maxHeight: "350px",
 }
-const OverlapContainer = styled.div`
+const Container = styled.div`
   width: 100%;
-  // display: flex;
-  // flex-direction: row;
-  border: 1px solid green;
-  margin: -3rem auto;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const Gallery = () => (
@@ -41,11 +39,11 @@ const Gallery = () => (
       <MainTitle>Gallery</MainTitle>
       <Image originalName="holy-family-3.png" style={imageStyle} />
     </Hero>
-    <OverlapContainer>
+    <Container>
       <GalleryCard title="a title" imageName="david.png" linkTo="/" />
       <GalleryCard title="a title" imageName="david.png" linkTo="/" />
       <GalleryCard title="a title" imageName="david.png" linkTo="/" />
-    </OverlapContainer>
+    </Container>
   </Layout>
 )
 
