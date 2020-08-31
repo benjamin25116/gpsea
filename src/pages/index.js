@@ -6,6 +6,7 @@ import LinkedBanner from "../components/linked-banner/linkedBanner"
 import styled from "styled-components"
 import VideoCard from "../components/videoCard"
 
+
 const TextContainer = styled.section`
   position: relative;
   top: 0;
@@ -38,6 +39,7 @@ const VideoSection = styled.article`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+
     <LinkedBanner
       imageName="holy-family-1.png"
       title="A Montessori Approach to Spiritual Education"
