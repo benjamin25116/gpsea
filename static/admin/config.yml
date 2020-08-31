@@ -20,8 +20,7 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-      
-collections:
+
   - name: "Home Banner" # Used in routes, e.g., /admin/collections/blog
     label: "Home Banner" # Used in the UI
     folder: "/src/images/home-banner" # The path to the folder where the documents are stored
