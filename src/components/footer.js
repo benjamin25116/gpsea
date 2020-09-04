@@ -60,9 +60,9 @@ const Footer = () => {
           Blog
         </Link>
 
-        <Link style={linkStyle} to="/gallery">
+        {/* <Link style={linkStyle} to="/gallery">
           Gallery
-        </Link>
+        </Link> */}
         <Link style={linkStyle} to="/contact">
           Contact
         </Link>

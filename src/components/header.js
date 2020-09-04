@@ -131,9 +131,9 @@ const Header = () => {
           <MenuItems>
             <Link to="/blog">Blog</Link>
           </MenuItems>
-          <MenuItems>
+          {/* <MenuItems>
             <Link to="/gallery">Gallery</Link>
-          </MenuItems>
+          </MenuItems> */}
           <MenuItems>
             <Link to="/contact">Contact</Link>
           </MenuItems>
