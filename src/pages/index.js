@@ -39,7 +39,7 @@ const VideoSection = styled.article`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-
+    
     <LinkedBanner
       imageName="holy-family-1.png"
       title="A Montessori Approach to Spiritual Education"
