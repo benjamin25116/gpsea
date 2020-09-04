@@ -9,7 +9,7 @@ const path = require(`path`)
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `MarkdownRemark` && node.internal.content != "") {
     const slug = path.basename(node.fileAbsolutePath, ".md")
 
     createNodeField({
@@ -39,12 +39,14 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      component: blogTemplate,
-      path: `/blog/${node.fields.slug}`,
-      context: {
-        slug: node.fields.slug,
-      },
-    })
+    if (node.fields) {
+      createPage({
+        component: blogTemplate,
+        path: `/blog/${node.fields.slug}`,
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    }
   })
 }
